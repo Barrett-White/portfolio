@@ -3,112 +3,300 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barrett White | Data Scientist</title>
+  <title>Barrett White | Data Science & Physics</title>
+  <meta name="description" content="Barrett White — Data Science & Physics at UNC Chapel Hill. Machine learning, analytics, and applied modeling projects." />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
+  <!-- Top bar -->
+  <header class="topbar" id="top">
+    <a class="brand" href="#top" aria-label="Go to top">Barrett White</a>
 
-<header class="hero">
-  <h1>Barrett White</h1>
-  <p>Data Science & Physics @ UNC Chapel Hill</p>
-  <p>Customer Service Analytics Intern · Capital One</p>
-  <a href="#projects" class="btn">View Projects</a>
-</header>
+    <button class="menu-btn" id="openMenu" aria-label="Open menu" aria-expanded="false">
+      <span class="menu-icon" aria-hidden="true"></span>
+      <span class="menu-text">Menu</span>
+    </button>
+  </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I’m a data science and physics student focused on applied machine learning,
-    analytics, and decision-making systems. I’ve worked on EEG-based
-    brain-to-text models, geospatial ML, and large-scale customer service analytics.
-  </p>
-</section>
+  <!-- Slide-over menu -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="drawer__top">
+        <span class="drawer__title">Menu</span>
+        <button class="icon-btn" id="closeMenu" aria-label="Close menu">✕</button>
+      </div>
 
-<section id="projects">
-  <h2>Projects</h2>
+      <nav class="drawer__nav">
+        <a href="#about" class="drawer__link">About</a>
+        <a href="#projects" class="drawer__link">Projects</a>
+        <a href="#experience" class="drawer__link">Experience</a>
+        <a href="#education" class="drawer__link">Education</a>
+        <a href="#skills" class="drawer__link">Skills</a>
+        <a href="#contact" class="drawer__link">Contact</a>
+      </nav>
 
-  <div class="project">
-    <h3>Brain-to-Text Neural Decoding</h3>
-    <p>
-      Built GRU, CNN-EEGNet, and transformer models to decode neural signals
-      into text. Improved PER over published baselines.
-    </p>
-    <p><strong>Tech:</strong> PyTorch, Transformers, Signal Processing</p>
-      <a
-    href="https://github.com/Sean0418/brain-to-text-project"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View on GitHub
-  </a>
-  </div>
+      <div class="drawer__cta">
+        <a class="btn btn--primary" href="assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer">
+          View Resume (PDF)
+        </a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/barrett-white-96079b204/" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a class="btn btn--ghost" href="https://github.com/Barrett-White" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </div>
+    <div class="drawer__backdrop" id="backdrop" tabindex="-1" aria-hidden="true"></div>
+  </aside>
 
-  <div class="project">
-    <h3>ASEAN Rice Classification</h3>
-    <p>
-      Combined Sentinel-1 & Sentinel-2 satellite data with environmental
-      features to classify rice crops across Southeast Asia.
-    </p>
-    <p><strong>Tech:</strong> Earth Engine, Random Forests, GIS</p>
-          <a
-    href="https://github.com/Barrett-White/ASEAN-Geospatial-Rice-Modeling"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View on GitHub
-  </a>
-  </div>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__left">
+        <h1 class="hero__title">Barrett White</h1>
+        <p class="hero__subtitle">Data Science & Physics @ UNC Chapel Hill • ML & Analytics</p>
+        <p class="hero__summary">
+          I build applied machine learning and analytics projects—from neural decoding experiments and geospatial ML
+          to large-scale clickstream analysis for operational decision-making.
+        </p>
 
-  <div class="project">
-    <h3> Postflop Poker Reinforcement Learning</h3>
-    <p>
-      Combined game theory optimal strategy with Q learning to train a poker bot with against different playstyles.
-    </p>
-    <p><strong>Tech:</strong> Reinforcement Learning, Python</p>
-          <a
-    href="https://github.com/Barrett-White/Postflop-Poker-RL"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View on GitHub
-  </a>
-  </div>
+        <div class="hero__buttons">
+          <a class="btn btn--primary" href="#projects">See Projects</a>
+          <a class="btn btn--ghost" href="assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
 
+        <div class="hero__links">
+          <a class="chip" href="mailto:barrettlw@gmail.com">barrettlw@gmail.com</a>
+          <a class="chip" href="https://www.linkedin.com/in/barrett-white-96079b204/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="chip" href="https://github.com/Barrett-White" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
 
+      <div class="hero__right">
+        <div class="profile-card" aria-label="Profile summary card">
+          <div class="profile-badge">BW</div>
+          <div class="profile-meta">
+            <div class="profile-name">Barrett White</div>
+            <div class="profile-small">919-400-1540 • Chapel Hill, NC</div>
+            <div class="profile-small">Data Science • Physics • Quantitative Finance</div>
+          </div>
+          <div class="profile-actions">
+            <a class="btn btn--primary btn--full" href="#contact">Contact</a>
+            <a class="btn btn--ghost btn--full" href="assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer">Open Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  
-</section>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section__title">About</h2>
+      <p class="section__text">
+        I’m a senior at the University of North Carolina at Chapel Hill studying Data Science and Physics with a
+        Quantitative Finance concentration. I’m especially interested in advanced machine learning and data-backed
+        decision-making—building models, running experiments, and communicating results clearly.
+      </p>
+    </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <ul>
-    <li><strong>Capital One</strong> – Customer Service Analytics Intern</li>
-    <li><strong>UNC Chapel Hill</strong> – Data Science & Physics</li>
-  </ul>
-</section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section__title">Projects</h2>
+      <p class="section__text">
+        A few curated projects that show my strengths across ML, analytics, and applied modeling.
+      </p>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <p>Python · SQL · PyTorch · scikit-learn · GIS · Statistics · Optimization</p>
-</section>
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="card">
+          <div class="card__media">
+            <img
+              src="https://source.unsplash.com/1200x800/?neuroscience,brain,signals"
+              alt="Abstract neuroscience / brain signals image"
+              loading="lazy"
+            />
+            <div class="media-tag">ML • Neural Decoding</div>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Brain-to-Text Neural Decoding</h3>
+            <p class="card__text">
+              Improved on an original GRU baseline by experimenting with stronger sequence modeling and preprocessing
+              to decode neural features into phoneme/text outputs. Focused on rigorous evaluation and error-rate driven iteration.
+            </p>
+            <p class="card__meta"><strong>Tech:</strong> Python, PyTorch, sequence models (GRU/Transformer-style), NumPy, Jupyter</p>
+            <div class="card__links">
+              <a class="link" href="https://github.com/Sean0418/brain-to-text-project" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+              <span class="note">Collaborative repo</span>
+            </div>
+          </div>
+        </article>
 
-<section id="resume">
-  <h2>Resume</h2>
-  <a href="assets/pdf/resume.pdf" target="_blank">Download Resume (PDF)</a>
-</section>
+        <!-- Project 2 -->
+        <article class="card">
+          <div class="card__media">
+            <img
+              src="https://source.unsplash.com/1200x800/?satellite,agriculture,map"
+              alt="Satellite / agriculture image"
+              loading="lazy"
+            />
+            <div class="media-tag">GIS • Remote Sensing</div>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">ASEAN Rice Classification</h3>
+            <p class="card__text">
+              Built a geospatial ML pipeline to classify rice cultivation using Sentinel imagery and environmental predictors.
+              Emphasized feature engineering, model comparison, and interpretability for real-world regional analysis.
+            </p>
+            <p class="card__meta"><strong>Tech:</strong> Python, Google Earth Engine, scikit-learn, Random Forest/XGBoost, GIS, pandas</p>
+            <div class="card__links">
+              <a class="link" href="https://github.com/Barrett-White/ASEAN-Geospatial-Rice-Modeling" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: barrett.white@email.com</p>
-  <p>
-    <a href="https://github.com/Barrett-White">GitHub</a> ·
-    <a href="https://linkedin.com/in/your-link">LinkedIn</a>
-  </p>
-</section>
+        <!-- Project 3 -->
+        <article class="card">
+          <div class="card__media">
+            <img
+              src="https://source.unsplash.com/1200x800/?poker,cards,casino"
+              alt="Poker cards image"
+              loading="lazy"
+            />
+            <div class="media-tag">RL • Game Theory</div>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Postflop Poker Reinforcement Learning</h3>
+            <p class="card__text">
+              Explored postflop decision-making with Q-learning and board-state abstractions, combining reinforcement learning
+              with game-theory foundations (GTO-inspired preflop) to evaluate strategic play under uncertainty.
+            </p>
+            <p class="card__meta"><strong>Tech:</strong> Python, RL (Q-learning), simulation, game theory concepts, NumPy</p>
+            <div class="card__links">
+              <a class="link" href="https://github.com/Barrett-White/Postflop-Poker-RL" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
 
-<footer>
-  <p>© 2025 Barrett White</p>
-</footer>
+      <div class="section__footer">
+        <a class="btn btn--ghost" href="https://github.com/Barrett-White" target="_blank" rel="noopener noreferrer">
+          View full project archive on GitHub →
+        </a>
+      </div>
+    </section>
 
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="section__title">Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <h3>Capital One — Business Analyst Intern</h3>
+            <p class="muted">Jun 2025 – Aug 2025</p>
+            <ul class="bullets">
+              <li>Analyzed 7B+ clickstream data points using SQL and Python to uncover behavioral learning patterns and optimization opportunities.</li>
+              <li>Delivered recommendations tied to ~$3.8M annual savings and improved customer service outcomes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <h3>Tennessee Valley Authority — Business Support Representative</h3>
+            <p class="muted">May 2024 – May 2025</p>
+            <ul class="bullets">
+              <li>Created scoring measures for business development ideas to increase objectivity in business decisions.</li>
+              <li>Built Power BI dashboards and analyzed energy usage / emissions data for large customers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <h3>Carolina Data Challenge — Abstract Sentiment Analysis</h3>
+            <p class="muted">Project</p>
+            <ul class="bullets">
+              <li>Built an end-to-end workflow to collect and translate reviews, then summarize city-level themes with NLP and visualization.</li>
+              <li>Worked with 600,000+ data points to surface common positive/negative phrases and descriptive terms.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <h2 class="section__title">Education</h2>
+      <div class="edu-card">
+        <div class="edu-main">
+          <h3>University of North Carolina at Chapel Hill</h3>
+          <p class="muted">Aug 2022 – Present</p>
+          <p class="edu-line">Double major: <strong>Data Science</strong>, <strong>Physics</strong> • Concentration: <strong>Quantitative Finance</strong></p>
+          <p class="edu-line">GPA: <strong>3.5</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="section__title">Skills</h2>
+
+      <div class="skills">
+        <div class="skills__col">
+          <h3 class="skills__title">Programming</h3>
+          <p class="skills__text">Python, C++, R, SQL</p>
+        </div>
+        <div class="skills__col">
+          <h3 class="skills__title">Visualization</h3>
+          <p class="skills__text">Tableau, Power BI, Matplotlib, Seaborn</p>
+        </div>
+        <div class="skills__col">
+          <h3 class="skills__title">Tools</h3>
+          <p class="skills__text">Snowflake, GitHub, Jupyter, Excel</p>
+        </div>
+        <div class="skills__col">
+          <h3 class="skills__title">Machine Learning</h3>
+          <p class="skills__text">scikit-learn, NLP, XGBoost, regression techniques</p>
+        </div>
+      </div>
+
+      <div class="section__footer">
+        <a class="btn btn--primary" href="assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer">
+          Download Resume →
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="section__title">Contact</h2>
+      <p class="section__text">
+        Email is the best way to reach me.
+      </p>
+
+      <div class="contact">
+        <a class="btn btn--primary" href="mailto:barrettlw@gmail.com">Email me</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/barrett-white-96079b204/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn btn--ghost" href="https://github.com/Barrett-White" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Barrett White</p>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
